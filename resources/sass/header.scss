@@ -1,0 +1,29 @@
+$primary: #1976d2;
+
+.page-header {
+  background-color: $primary;
+  height: 64px;
+  line-height: 64px;
+  .logo {
+    width: 200px;
+    height: 53px;
+    line-height: 53px;
+    margin-right: 50px;
+    font-size: 0;
+  }
+  .container {
+    height: 100%;
+  }
+  .outlink {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-right: 60px;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+    &.router-link-active {
+      color: #fff;
+    }
+  }
+}

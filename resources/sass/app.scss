@@ -1,8 +1,117 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+/*
+* 弹性盒模型
+*/
+.hg-flex {
+  display: flex;
+}
+.hg-flex-center {
+  align-items:center;
+}
+.hg-flex-end {
+  flex-align:flex-end;
+}
+.hg-flex-start {
+  flex-align:flex-start;
+}
+.hg-justify-center {
+  justify-content: center;
+}
+.hg-flex-one {
+  flex: 1;
+ }
+.hg-flex-two {
+  flex: 1;
+}
+.hg-vertical {
+  flex-direction: column;
+}
+.hg-row-reverse {
+  flex-direction: row-reverse;
+}
+.hg-flex-overflow {
+  flex-wrap: wrap;
+}
+
+body {
+  background-color: #f7f7f7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+  color: #333;
+  font-size: 12px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul, li {
+  list-style: none;
+}
+
+$primary: #1976d2;
+
+.btn:focus, .btn:active:focus {
+  outline: none;
+  box-shadow: none!important;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  color: #fff;
+  &:hover {
+    background-color: lighten($primary, 4%);
+    border-color: lighten($primary, 4%);
+  }
+  &:active {
+    background-color: darken($primary, 6%);
+    border-color: darken($primary, 6%);
+  }
+}
+
+.page-view {
+  .page-title {
+    line-height: 56px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: normal;
+  }
+  .form-title {
+    color: #333;
+    margin-right: 20px;
+  }
+  .form-group {
+    margin: 0 30px 20px;
+  }
+  .form-control {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 12px;
+    width: 165px;
+    color: #333;
+    border-color: #ebebeb;
+    border-radius: 2px;
+    &:focus {
+      border-color: $primary;
+      box-shadow: none;
+    }
+    &:hover {
+      border-color: #8391a5;
+    }
+  }
+  .btn-primary {
+    width: 145px;
+    margin: 10px;
+  }
+}
+
+@import 'header';
