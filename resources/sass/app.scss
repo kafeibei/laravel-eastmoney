@@ -66,6 +66,9 @@ $primary: #1976d2;
 .primary {
   color: $primary;
 }
+.gray {
+  color: #999;
+}
 .center {
   text-align: center!important;
 }
@@ -77,7 +80,7 @@ $primary: #1976d2;
 .btn {
   height: 38px;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 15px;
 }
 .btn-primary {
   background-color: $primary;
@@ -132,7 +135,7 @@ $primary: #1976d2;
   }
   .btn-primary {
     width: 145px;
-    margin: 10px;
+    margin: 10px 20px 10px 5px;
   }
 }
 

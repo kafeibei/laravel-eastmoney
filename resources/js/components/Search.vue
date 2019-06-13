@@ -3,7 +3,7 @@
     <form class="form-search">
       <h2 class="page-title">某某财经门户网</h2>
       <div class="form-group">
-        <label class="form-title">ID：</label>
+        <label class="form-title">stockID：</label>
         <input type="number" name="thresh" class="form-control" placeholder="查询id" v-model="params.stock_id" />
       </div>
       <div class="form-group">
@@ -13,7 +13,10 @@
           <el-radio-button label="table">列表</el-radio-button>
         </el-radio-group>
       </div>
-      <button class="btn btn-primary" @click.stop.prevent="searchDB">数据查询</button>
+      <div class="form-group">
+        <label class="form-title">&nbsp;</label>
+        <button class="btn btn-primary" @click.stop.prevent="searchDB">数据查询</button>
+      </div>
     </form>
     <div class="form-result" v-if="loaded">
       <div class="form-chart" v-if="type === 'echart'">
@@ -107,7 +110,7 @@ export default({
       this.pageDB()
     },
     changeRadio () {
-      this.searchDB()
+      this.loaded = false
     },
     sortBy (data) {
       this.params.prop = data.prop

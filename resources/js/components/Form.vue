@@ -11,8 +11,11 @@
       <input type="date" name="start_date" class="form-control" placeholder="开始时间" v-model="params.start_date" />-
       <input type="date" name="end_date" class="form-control" placeholder="结束时间" v-model="params.end_date" />
     </div>
-    <button class="btn btn-primary" @click.stop.prevent="createDB">数据库生成</button>
-    <button name="method" class="btn btn-primary" @click.stop.prevent="updateDB">数据库更新</button>
+    <div class="form-group">
+      <label class="form-title">&nbsp;</label>
+      <button class="btn btn-primary" @click.stop.prevent="createDB">数据库生成</button>
+      <button name="method" class="btn btn-primary" @click.stop.prevent="updateDB">数据库更新</button>
+    </div>
   </form>
 </template>
 
@@ -36,9 +39,15 @@ export default({
         params: this.params
       }).then((res) => {
         if (res.code !== 500) {
-          alert('数据库生成成功');
+          this.$message({
+            message: '数据库生成成功',
+            type: 'success'
+          });
         } else {
-          alert(res.message);
+          this.$message({
+            message: res.message,
+            type: 'error'
+          });
         }
       })
     },
@@ -48,9 +57,15 @@ export default({
         params: this.params
       }).then((res) => {
         if (res.code !== 500) {
-          alert('数据库更新成功');
+          this.$message({
+            message: '数据库更新成功',
+            type: 'success'
+          });
         } else {
-          alert(res.message);
+          this.$message({
+            message: res.message,
+            type: 'error'
+          });
         }
       })
     }

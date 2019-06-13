@@ -17,10 +17,16 @@ export default {
           if (res.code === 200) {
             commit('SET_SEARCH_DB', res.data);
           } else {
-            alert(res.message);
+            window.ddVue.$message({
+              message: res.message,
+              type: 'error'
+            });
           }
         }, err => {
-          alert('接口访问错误');
+          window.ddVue.$message({
+            message: '接口访问错误',
+            type: 'error'
+          });
         });
     },
     toPageDB ({commit}, {params}) {
@@ -29,10 +35,16 @@ export default {
           if (res.code === 200) {
             commit('SET_PADE_DB', res.data);
           } else {
-            alert(res.message);
+            window.ddVue.$message({
+              message: res.message,
+              type: 'error'
+            });
           }
         }, err => {
-          alert('接口访问错误');
+          window.ddVue.$message({
+            message: '接口访问错误',
+            type: 'error'
+          });
         });
     }
   }

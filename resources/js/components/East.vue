@@ -5,8 +5,11 @@
       <label class="form-title">数据处理：</label>
       <input type="number" name="thresh" class="form-control" placeholder="post参数" v-model="params.thresh" />
     </div>
-    <button class="btn btn-primary" @click.stop.prevent="calcDB">数据计算</button>
-    <button class="btn btn-primary" @click.stop.prevent="filterDB">数据过滤</button>
+    <div class="form-group">
+      <label class="form-title">&nbsp;</label>
+      <button class="btn btn-primary" @click.stop.prevent="calcDB">数据计算</button>
+      <button class="btn btn-primary" @click.stop.prevent="filterDB">数据过滤</button>
+    </div>
   </form>
 </template>
 
@@ -26,9 +29,15 @@ export default({
         type: 'toCalcDB'
       }).then((res) => {
         if (res.code !== 500) {
-          alert('数据计算成功');
+          this.$message({
+            message: '数据计算成功',
+            type: 'success'
+          });
         } else {
-          alert(res.message);
+          this.$message({
+            message: res.message,
+            type: 'error'
+          });
         }
       })
     },
@@ -41,9 +50,15 @@ export default({
         params: this.params
       }).then((res) => {
         if (res.code !== 500) {
-          alert('数据过滤成功');
+          this.$message({
+            message: '数据过滤成功',
+            type: 'success'
+          });
         } else {
-          alert(res.message);
+          this.$message({
+            message: res.message,
+            type: 'error'
+          });
         }
       })
     }
