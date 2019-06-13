@@ -1,6 +1,4 @@
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
+@import "reset";
 /*
 * 弹性盒模型
 */
@@ -63,7 +61,11 @@ $primary: #1976d2;
   outline: none;
   box-shadow: none!important;
 }
-
+.btn {
+  height: 38px;
+  border-radius: 3px;
+  font-size: 16px;
+}
 .btn-primary {
   background-color: $primary;
   border-color: $primary;
@@ -97,15 +99,17 @@ $primary: #1976d2;
     margin: 0 5px;
     font-size: 12px;
     width: 165px;
+    height: 32px;
+    padding: 6px 12px;
     color: #333;
-    border-color: #ebebeb;
+    border: 1px solid #ebebeb;
     border-radius: 2px;
     &:focus {
       border-color: $primary;
       box-shadow: none;
     }
     &:hover {
-      border-color: #8391a5;
+      border-color: $primary;
     }
   }
   .btn-primary {
@@ -114,4 +118,4 @@ $primary: #1976d2;
   }
 }
 
-@import 'header';
+@import "header";

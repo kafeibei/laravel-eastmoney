@@ -65,7 +65,7 @@ export default {
 		      bottom: '12%',
 		      containLabel: true,
 		    },
-        color: ['#0095ff', '#52cc56', '#faa032', '#f5ca31'],
+        color: ['#0095ff', '#52cc56', '#faa032', '#f5ca31', '#b42cde'],
         xAxis: {
           type: 'category',
           boundaryGap: false,

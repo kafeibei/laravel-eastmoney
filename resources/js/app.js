@@ -5,7 +5,6 @@ Vue.use(VueRouter)
 import store from './store/'; // vuex 数据存储所需对象
 import routes from './router/';    // 路由配置文件
 const router = new VueRouter({
-  mode: 'history',
   routes
 })
 
