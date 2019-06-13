@@ -13,7 +13,8 @@ export default new Vuex.Store({
     east,
     search: {
       state: {
-        searchInfo: ''
+        searchInfo: '',
+        pageInfo: ''
       },
       ...search
     },

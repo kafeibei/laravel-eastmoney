@@ -1,0 +1,27 @@
+.table-list {
+  width: 100%;
+  .el-table {
+    font-size: 12px;
+    color: #333;
+    th {
+      height: 44px;
+      background-color: #fafafa;
+      border-bottom: 1px solid #efefef;
+      font-weight: normal;
+      color: #333;
+      padding: 0;
+    }
+    td {
+      height: 44px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    tr {
+      td:first-child .cell, th:first-child .cell{
+        margin-left: 10px;
+      }
+      &:hover td {
+        background-color: #fafafa;
+      }
+    }
+  }
+}

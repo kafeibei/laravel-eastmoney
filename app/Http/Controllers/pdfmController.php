@@ -230,11 +230,34 @@ class pdfmController extends Controller
         'message' => '数据不存在'
       ]);
     }
-    $east = DB::table($eastTable)->orderBy('date', 'asc')->get()->all();
-    return $this->output((object)[
-      'code'  => 200,
-      'data' => $east
-    ]);
+    $stock = Stock::where(['stock_id'=>$stock_id])->first();
+    $east = DB::table($eastTable);
+    $count = request('count');
+    if ($count) {
+      $prop = request('prop') ?: 'date';
+      $order = request('order') == 'descending' ? 'desc' : 'asc';
+      $output = $east
+        ->orderBy($prop, $order)
+        ->paginate($count);
+      return $this->output((object)[
+        'code'  => 200,
+        'data' => [
+          'east'  => $this->listToPage($output),
+          'stock' => $stock
+        ]
+      ]);
+    } else {
+      $output = $east
+        ->orderBy('date', 'asc')
+        ->get()->all();
+      return $this->output((object)[
+        'code'  => 200,
+        'data' => [
+          'east' => $output,
+          'stock' => $stock
+        ]
+      ]);
+    }
   }
 
   private function curlPdfm () {

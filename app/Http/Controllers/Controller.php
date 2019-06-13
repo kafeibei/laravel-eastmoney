@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -15,6 +16,18 @@ class Controller extends BaseController
 
     public function output ($data = [],$status = 200,$header = []) {
       return response()->json($data, $status, $header);
+    }
+
+    protected function listToPage (LengthAwarePaginator $page) {
+      $items = $page->items();
+      return [
+        'page'  => [
+          'total' => $page->total(),
+          'current_page'  => $page->currentPage(),
+          'last_page' => $page->lastPage()
+        ],
+        'data'  => $items
+      ];
     }
 
     protected function supplyNumber ($str, $num = 6)
