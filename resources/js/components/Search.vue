@@ -1,6 +1,6 @@
 <template>
-  <form class="form-search" action="./">
-    <h2 class="page-title">东方财富网</h2>
+  <form class="form-search">
+    <h2 class="page-title">某某财经门户网</h2>
     <div class="form-group">
       <label class="form-title">ID：</label>
       <input type="number" name="thresh" class="form-control" placeholder="查询id" v-model="params.stock_id" />

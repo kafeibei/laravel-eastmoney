@@ -1,6 +1,6 @@
 <template>
-  <form class="form-east" action="./">
-    <h2 class="page-title">东方财富网</h2>
+  <form class="form-east">
+    <h2 class="page-title">某某财经门户网</h2>
     <div class="form-group">
       <label class="form-title">数据处理：</label>
       <input type="number" name="thresh" class="form-control" placeholder="post参数" v-model="params.thresh" />
@@ -16,7 +16,7 @@ export default({
   data () {
     return {
       params: {
-        thresh: 2
+        thresh: null
       }
     }
   },
