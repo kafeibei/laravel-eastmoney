@@ -6,7 +6,7 @@
 ## 1. Introduction - 简介
 基于某某财经网站的股票分析工具；内容包括：获取股票信息，本地存储，分析统计，图标展示；技术栈包括：
 
-* Lavarel (sqlite + redis)
+* Lavarel (sqlite)
 * Vue2 全家桶(vue2 + axios + vue-router + vuex)
 * elementUI + Sass + echarts
 
@@ -45,18 +45,18 @@
 
 ## 3. Installation - 安装
 
-### 2.1 环境配置
-#### 2.1.1 安装php
+### 3.1 环境配置
+#### 3.1.1 安装php
 ```
 brew install php -g
 ```
 
-#### 2.1.2 安装composer
+#### 3.1.2 安装composer
 ```
 brew install composer -g
 ```
 
-#### 2.1.4 安装node
+#### 3.1.4 安装node
 ```
 # 安装n模块
 npm install -g n
@@ -66,13 +66,7 @@ n stable
 n v6.11.5
 ```
 
-#### 2.1.3 安装redis
-```
-brew install redis -g
-```
-
-
-### 2.2 安装步骤
+### 3.2 安装步骤
 ```
 # 下载仓库
 git clone https://github.com/kafeibei/laravel-eastmoney.git
@@ -87,4 +81,4 @@ php artisan key:generate
 # bootstrap/cache目录给权限
 # storage目录给权限
 ```
-启动完成后，打开浏览器访问 http://127.0.0.1:8002 ，就可以看到项目的数据生成页了
+启动完成后，打开浏览器访问 http://127.0.0.1:8000 ，就可以看到项目的数据生成页了

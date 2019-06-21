@@ -8,16 +8,18 @@ $primary: #1976d2;
     width: 200px;
     height: 53px;
     line-height: 53px;
-    margin-right: 50px;
+    margin-right: 30px;
     font-size: 0;
   }
   .container {
     height: 100%;
   }
   .outlink {
+    display: inline-block;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
-    margin-right: 60px;
+    margin-right: 20px;
+    padding: 0 20px;
     &:hover {
       color: #fff;
       text-decoration: none;

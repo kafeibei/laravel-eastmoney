@@ -19,7 +19,7 @@ export default {
   props: ['data'],
   data () {
     return {
-      view: ['eprice', 'tv_ratio', 'to_ratio', 'avg5', 'avg10', 'avg20', 'avg30'],
+      view: ['eprice', 'tv_ratio', 'to_ratio', 'tt_ratio', 'avg5', 'avg10', 'avg20', 'avg30'],
       stockSetting: stockSetting,
       params: {}
     }

@@ -5,6 +5,7 @@ export const stockSetting = {
   eprice: '收盘价',
   trade_vol: '成交量',
   turnover: '成交额',
+  tt_ratio: 'fft',
   avg5: '5日均线',
   avg10: '10日均线',
   avg20: '20日均线',
